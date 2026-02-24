@@ -5,7 +5,7 @@ WITH station_dimension AS (
     START_LAT,
     START_LNG 
     FROM
-    {{source('demo','bike')}}
+    {{ ref('stg_bike') }}
 )
 
 SELECT * FROM station_dimension
